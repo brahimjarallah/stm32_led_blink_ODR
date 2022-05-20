@@ -6,7 +6,7 @@ void delay(void);
 
 int main(){
 	
-	RCC->AHB1ENR |= 1000; // enable PORTD clock  - 1bit/digit 16bits
+	RCC->AHB1ENR |= 1000; // enable PORTD clock  - 1bit/digit 16bits  (set bit 4 to 1)
 	GPIOD->MODER |= 0x40000000; // make pin 15 as output (led LD6 PD15)
 	// enable MODR for GPIOA 4bits/digit (2bits-inputs for MODR) 
 	// (pin 0 to pin 15 "2bits/pin")   32 bits
